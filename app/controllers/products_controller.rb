@@ -1,3 +1,3 @@
-class ProductsController < ActionController::API
+class ProductsController < ActionController
   
 end
