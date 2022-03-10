@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/product", controller:"products", action:"first_product"
   get "/products" => "products#all_products"
+  get "/product/:thing" => "products#any_product_from_segment"
 end
