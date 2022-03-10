@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   end
 
   def any_product_from_segment
-    input_id = params[:id]
+    input_id = params["id"]
     product = Product.find_by(id: input_id)
     render json: product.as_json
   end
