@@ -35,6 +35,5 @@ class ProductsController < ApplicationController
     
     product.save
     render json: product.as_json
-    
   end
 end
