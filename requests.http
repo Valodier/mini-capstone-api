@@ -15,3 +15,7 @@ Content-Type: application/json
   "description": "Something frankenstien's monster is very afraid of"
 }
 
+###Recipe Update
+PATCH http://localhost:3000/products
+
+

@@ -22,7 +22,6 @@ class ProductsController < ApplicationController
     )
     product.save
     render json: product.as_json
-    
   end
   
   # def any_product_from_segment
