@@ -1,0 +1,17 @@
+###Recipes Index
+GET http://localhost:3000/products
+
+###Recipes Show
+GET http://localhost:3000/products/2
+
+###Recipes Create
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Torch",
+  "price": 13,
+  "image_url": "frankestiens_monsters_fears.jpeg",
+  "description": "Something frankenstien's monster is very afraid of"
+}
+
