@@ -16,6 +16,13 @@ Content-Type: application/json
 }
 
 ###Recipe Update
-PATCH http://localhost:3000/products
+PATCH http://localhost:3000/products/7
+Content-Type: application/json
 
+{
+  "name": "Torch",
+  "price": 12,
+  "image_url": "frankestiens_monsters_fears.jpeg",
+  "description": "Something frankenstien's monster is very afraid of"
+}
 
