@@ -3,8 +3,11 @@ require "http"
 system "clear"
 
 puts "Welcome to the Amazon Breaker"
+puts "Please input desired item id:"
+id = gets.chomp
 
-response = HTTP.get("http://localhost:3000/product")
+show = HTTP.get("http://localhost:3000/products/#{id}")
 
-pp response.parse(:json)
+pp show.parse(:json)
+
 
