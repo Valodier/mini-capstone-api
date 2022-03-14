@@ -16,16 +16,13 @@ Content-Type: application/json
 }
 
 ###Product Update
-PATCH http://localhost:3000/products/7
+PATCH http://localhost:3000/products/1
 Content-Type: application/json
 
 {
-  "name": "Torch",
-  "price": 12,
-  "image_url": "frankestiens_monsters_fears.jpeg",
-  "description": "Something frankenstien's monster is very afraid of"
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/1024px-Banana_and_cross_section.jpg"
 }
 
 ###Product Destroy
-DELETE http://localhost:3000/products/8.json
+DELETE http://localhost:3000/products/8.js
 
