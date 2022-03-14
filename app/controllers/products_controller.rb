@@ -36,4 +36,11 @@ class ProductsController < ApplicationController
     product.save
     render json: product.as_json
   end
+
+  def destroy
+    product_id = params[:id]
+    product = Product.find_by(id:product_id)
+    product.destroy
+    render json: {message: "MY GOD WHAT HAVE YOU DONE?!"}
+  end
 end
