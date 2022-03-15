@@ -1,16 +1,19 @@
 class ProductsController < ApplicationController
   def index
-    render json: Product.all.as_json(methods: [:is_discounted, :tax, :total])
+    @products = Product.all
+    render template: "products/index"
+    # render json: Product.all.as_json(methods: [:is_discounted, :tax, :total])
   end
 
   def show
     product_id = params["id"]
     product = Product.find_by(id: product_id)
-    render json: product.as_json(methods: [:is_discounted, :tax, :total])
+    render template: "products/show"
+    # render json: product.as_json(methods: [:is_discounted, :tax, :total])
   end
 
   def create
-    product = Product.new(
+    @product = Product.new(
       name: params["name"],
       price: params["price"],
       image_url: params["image_url"],
