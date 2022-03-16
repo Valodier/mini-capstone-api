@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
   def show
     product_id = params["id"]
-    product = Product.find_by(id: product_id)
+    @product = Product.find_by(id: product_id)
     render template: "products/show"
     # render json: product.as_json(methods: [:is_discounted, :tax, :total])
   end
@@ -19,21 +19,28 @@ class ProductsController < ApplicationController
       image_url: params["image_url"],
       description: params["description"]
     )
-    product.save
-    render json: product.as_json
+    if @product.save
+      render :show
+      # render template: "products/show"
+    else
+      render json: {errors: @product.errors.full_messages}, status: 422
+    end
   end
   
   def update
     product_id = params[:id]
-    product = Product.find_by(id: product_id)
+    @product = Product.find_by(id: product_id)
 
-    product.name = params["name"] || product.name
-    product.price = params["price"] || product.price
-    product.image_url = params["image_url"] || product.image_url
-    product.description = params["description"] || product.description
+    @product.name = params["name"] || @product.name
+    @product.price = params["price"] || @product.price
+    @product.image_url = params["image_url"] || @product.image_url
+    @product.description = params["description"] || @product.description
     
-    product.save
-    render json: product.as_json
+    if @product.save
+      render template: "products/show"
+    else
+      render json: {errors: @product.errors.full_messages}, status: 422
+    end
   end
 
   def destroy
