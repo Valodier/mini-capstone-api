@@ -15,6 +15,8 @@ gem "puma", "~> 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 gem "jb"
+
+# Dump current instances of all models into db:seeds.rb [https://github.com/rroblak/seed_dump]
 gem "seed_dump"
 
 # Use Redis adapter to run Action Cable in production
