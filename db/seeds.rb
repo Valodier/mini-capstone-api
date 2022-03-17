@@ -17,3 +17,10 @@
 
 # product4 = Product.new ({name: "Monopoly", price:60, image_url:"", description:"An educational game about how the rich always win"})
 # product4.save
+
+supplier1 = Supplier.new ({name: "Facebook", email: "TheZuck@aol", phone_number: "111-1111"})
+supplier1.save
+supplier2 = Supplier.new ({name: "Waste Management", email: "Garbage@trash", phone_number: "333-3333"})
+supplier2.save
+supplier3 = Supplier.new ({name: "America", email: "Oligarchy@Rich", phone_number: "000-0000"})
+supplier3.save
