@@ -20,7 +20,7 @@ class SuppliersController < ApplicationController
     if @supplier.save
       render :show
     else
-      render :json {Message: @suppliers.errors.full_messages},
+      render json: {Message: @suppliers.errors.full_messages},
       status: 422
     end    
   end
@@ -36,7 +36,7 @@ class SuppliersController < ApplicationController
     if @supplier.save
       render :show      
     else
-      render :json {message: @supplier.erros.full_messages},
+      render json: {errors: @supplier.erros.full_messages},
       status: 422
     end
     
