@@ -4,10 +4,10 @@
   price: @product.price,
   image_url: @product.image_url,
   description: @product.description,
+  supplier: @product.supplier,
   is_discounted: @product.is_discounted,
   tax: @product.tax,
   total: @product.total,
-  supplier_id:@product.supplier_id,
   created_at: @product.created_at,
   updated_at: @product.updated_at
 }
