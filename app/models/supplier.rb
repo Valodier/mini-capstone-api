@@ -1,6 +1,6 @@
 class Supplier < ApplicationRecord
 
-  def product
+  def products
     Product.where(supplier_id: id)    
   end
 
