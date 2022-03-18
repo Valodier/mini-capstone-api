@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   patch "/suppliers/:id" => "suppliers#update"
   delete "/suppliers/:id" => "suppliers#destroy"
   # get "/suppliers/:thing" => "suppliers#any_product_from_segment"
+
+  #Images
+  post "/images/:id" => "images#create"
 end
