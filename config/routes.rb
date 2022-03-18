@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   #Images
   get "/images" => "images#index"
   post "/images" => "images#create"
+  patch "Images/:id" => "imades#update"
 end

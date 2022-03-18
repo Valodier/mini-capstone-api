@@ -15,5 +15,5 @@ POST http://localhost:3000/1.json
 Content-Type: application/json
 
 {
-  "product_id":
+  "product_id":1
 }
