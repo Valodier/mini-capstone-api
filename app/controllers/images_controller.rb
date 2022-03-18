@@ -1,4 +1,9 @@
 class ImagesController < ApplicationController
+
+  def index
+    @image = Image.all
+    render :show
+  end
   
   def create
     @image = Image.new(
