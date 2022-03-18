@@ -21,5 +21,5 @@ Rails.application.routes.draw do
 
   #Images
   get "/images" => "images#index"
-  post "/images/:id" => "images#create"
+  post "/images" => "images#create"
 end

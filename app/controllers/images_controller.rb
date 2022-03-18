@@ -13,7 +13,7 @@ class ImagesController < ApplicationController
     if @image.save
       render :show
     else
-      render json: {errors: @image.errors.full_messages}
+      render json: {errors: @image.errors.full_messages},
       status: 422
     end
   end
