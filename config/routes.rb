@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   # get "/suppliers/:thing" => "suppliers#any_product_from_segment"
 
   #Images
+  get "/images" => "images#index"
   post "/images/:id" => "images#create"
 end
