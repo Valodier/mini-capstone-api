@@ -11,9 +11,9 @@ Content-Type: application/json
 }
 
 ###Images Update
-POST http://localhost:3000/1.json
+POST http://localhost:3000/images/1.json
 Content-Type: application/json
 
 {
-  "product_id":1
+  "product_id":2
 }
