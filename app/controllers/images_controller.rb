@@ -1,8 +1,9 @@
 class ImagesController < ApplicationController
 
   def index
-    @image = Image.all
-    render :show
+    @images = Image.all
+    render :index
+    # render json: Image.all.as_json
   end
   
   def create
@@ -18,18 +19,18 @@ class ImagesController < ApplicationController
     end
   end
 
-  # def update
-  #   image_id = params[:id]
-  #   @image = Image.find_by[id:image_id]
+  def update
+    image_id = params[:id]
+    @image = Image.find_by(id:image_id)
     
-  #   @image.url = params["url"] || @image.url
-  #   @image.product_id = params["product_id"] || @image.product_url
-  # end
+    @image.url = params["url"] || @image.url
+    @image.product_id = params["product_id"] || @image.product_url
 
-  # if @image.save
-  #   render :show
-  # else
-  #   render json: {errors: @image.errors.full_messages},
-  #   status: 422
-  # end
+    if @image.save
+      render :show
+    else
+      render json: {errors: @image.errors.full_messages},
+      status: 422
+    end
+  end
 end
