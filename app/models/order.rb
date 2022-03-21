@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  belongs_to :User
+  belongs_to :user
   #belongs_to reflects the foreing key (user_id) column within the schema for this model
   #Order schema has a #user_id# and a #product_id# column, thus they BELONG TO those things
   belongs_to :product

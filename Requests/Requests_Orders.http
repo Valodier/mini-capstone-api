@@ -1,0 +1,13 @@
+###Orders Create
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5NzY5OTF9.mlu8MsbeU0KhN05Y-EmlELmsx706sWXhh92_ab0YDlg
+Content-Type: application/json
+
+{
+  "user_id":"1",
+  "product_id":"2",
+  "quantity":"2",
+  "subtotal":"2",
+  "tax":"2",
+  "total":"2"
+}
