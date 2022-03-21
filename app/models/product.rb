@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  has_many :orders
+  
   # validates :price, numericality: {only_decimal: true}
   # validates :name, length: {minimum: 2}
   # validates :name, presence: true
