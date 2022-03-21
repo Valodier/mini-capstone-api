@@ -1,5 +1,6 @@
 ###Product Index
 GET http://localhost:3000/products.json
+#Authorization: Bearer 
 
 ###Product Show
 GET http://localhost:3000/products/2.json

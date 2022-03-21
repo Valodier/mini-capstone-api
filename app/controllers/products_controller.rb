@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def index
+   # pp current_user
     @products = Product.all
     render template: "products/index"
     # render json: Product.all.as_json(methods: [:is_discounted, :tax, :total])
