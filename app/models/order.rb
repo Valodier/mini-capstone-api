@@ -16,3 +16,7 @@ end
 # Routes for POSTing the information for what you want, and the quantity of what you want
 
 #JB view for order, and a reflection of the belongs_to
+
+#authentication
+
+# Login --> POST (quantity) --> GET/show(totals = quantity*tax), 
