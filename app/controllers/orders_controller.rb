@@ -7,8 +7,8 @@ class OrdersController < ApplicationController
 
 
   def show
-    order = current_user.orders.find_by(id: params["id"])
-    render json: order
+    @order = current_user.orders.find_by(id: params["id"])
+    render :show
   end
 
 
