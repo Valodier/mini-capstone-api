@@ -1,14 +1,22 @@
 class OrdersController < ApplicationController
   
   def index
-    @orders = current_user.orders
-    render :index
+    if current_user
+      @orders = current_user.orders
+      render :index
+    else
+      render json: [], status: :unauthorized
+    end
   end
 
 
   def show
-    @order = current_user.orders.find_by(id: params["id"])
-    render :show
+    if current_user
+      @order = current_user.orders.find_by(id: params["id"])
+      render :show
+    else
+      render json: [], status: :unauthorized
+    end
   end
 
 
