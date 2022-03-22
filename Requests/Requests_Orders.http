@@ -1,18 +1,18 @@
 ###Orders Index
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTU4NDh9.AoL-aK27wpVJpxdiL0NEulA4Kyn9ENMPVxIDEdecwfU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgwNTgzMjh9.ZFVWXQEjREu4YjO4IkQtej_OVqEQzhLhrEMswRMRRIs
 
 ###Orders Show
 GET http://localhost:3000/orders/1.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTU4NDh9.AoL-aK27wpVJpxdiL0NEulA4Kyn9ENMPVxIDEdecwfU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgwNTgzMjh9.ZFVWXQEjREu4YjO4IkQtej_OVqEQzhLhrEMswRMRRIs
 
 
 ###Orders Create
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTU4NDh9.AoL-aK27wpVJpxdiL0NEulA4Kyn9ENMPVxIDEdecwfU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgwNTgzMjh9.ZFVWXQEjREu4YjO4IkQtej_OVqEQzhLhrEMswRMRRIs
 Content-Type: application/json
 
 {
-  "product_id":3,
-  "quantity":2
+  "product_id": 1,
+  "quantity": 2
 }
