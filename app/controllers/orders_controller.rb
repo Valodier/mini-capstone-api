@@ -1,15 +1,14 @@
 class OrdersController < ApplicationController
   
   def index
-    orders = current_user.order
+    orders = current_user.orders
     render json: orders
   end
 
 
   def show
-    order_id = params["id"]
-    @order = Order.find_by(id:order_id)
-    render json: @order
+    order = current_user.orders.find_by(id: params["id"])
+    render json: order
   end
 
 
