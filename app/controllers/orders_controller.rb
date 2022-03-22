@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
   
   def index
-    orders = current_user.orders
-    render json: orders
+    @orders = current_user.orders
+    render :index
   end
 
 
