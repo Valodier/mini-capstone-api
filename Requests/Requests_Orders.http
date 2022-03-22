@@ -1,8 +1,10 @@
 ###Orders Index
 GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTU4NDh9.AoL-aK27wpVJpxdiL0NEulA4Kyn9ENMPVxIDEdecwfU
 
 ###Orders Show
 GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTU4NDh9.AoL-aK27wpVJpxdiL0NEulA4Kyn9ENMPVxIDEdecwfU
 
 
 ###Orders Create
