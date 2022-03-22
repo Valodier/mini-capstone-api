@@ -6,8 +6,8 @@ POST http://localhost:3000/images.json
 Content-Type: application/json
 
 {
-  "url": "url",
-  "product_id": 1
+  "url": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNjE0MTR9.xuoZI00jMMGEMQgGGtoMZAjFdKnGPVg6LO1ldh_4Xh4",
+  "product_id": 18
 }
 
 ###Images Update

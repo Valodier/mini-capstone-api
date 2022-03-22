@@ -1,27 +1,31 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNjE0MTR9.xuoZI00jMMGEMQgGGtoMZAjFdKnGPVg6LO1ldh_4Xh4
+
 ###Product Index
 GET http://localhost:3000/products.json
-#Authorization: Bearer 
 
 ###Product Show
 GET http://localhost:3000/products/2.json
 
 ###Product Create
 POST http://localhost:3000/products.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "name": "Taerch",
-  "price": 14,
+  "name": "Razer",
+  "price": 10000,
   "image_url": "frankestiens_monsters_fears.jpeg",
-  "description": "Something frankenstien's monster is very afraid of"
+  "description": "phone of old",
+  "supplier_id": 3
 }
 
 ###Product Update
-PATCH http://localhost:3000/products/1.json
+PATCH http://localhost:3000/products/18.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/1024px-Banana_and_cross_section.jpg"
+  "price": 11000
 }
 
 ###Product Destroy
