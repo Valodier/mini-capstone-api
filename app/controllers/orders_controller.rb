@@ -1,9 +1,15 @@
 class OrdersController < ApplicationController
   
+  def index
+    @order = Order.all
+    render:index
+  end
+
+
   def show
     order_id = params["id"]
-    @order
-    
+    @order = Order.find_by(id:order_id)
+    render :show
   end
 
 

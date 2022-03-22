@@ -1,3 +1,10 @@
+###Orders Index
+GET http://localhost:3000/orders.json
+
+###Orders Show
+GET http://localhost:3000/orders/1.json
+
+
 ###Orders Create
 POST http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5NzY5OTF9.mlu8MsbeU0KhN05Y-EmlELmsx706sWXhh92_ab0YDlg
