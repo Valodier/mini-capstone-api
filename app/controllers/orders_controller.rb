@@ -1,22 +1,15 @@
 class OrdersController < ApplicationController
-  
+  before_action: authenticate_user
+
   def index
-    if current_user
-      @orders = current_user.orders
-      render :index
-    else
-      render json: [], status: :unauthorized
-    end
+    @orders = current_user.orders
+    render :index
   end
 
 
   def show
-    if current_user
-      @order = current_user.orders.find_by(id: params["id"])
-      render :show
-    else
-      render json: [], status: :unauthorized
-    end
+    @order = current_user.orders.find_by(id: params["id"])
+    render :show
   end
 
 
