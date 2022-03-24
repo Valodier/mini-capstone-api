@@ -14,13 +14,13 @@ class Product < ApplicationRecord
   # end
 
   has_many :category_products
-  has_many :products, through: :category_products
+  has_many :categories, through: :category_products
   ###This down here the same as this ^^^
-  def products
-    category_products.map do |category_product|
-      category_product.category 
-    end   
-  end
+  # def categories
+  #   category_products.map do |category_product|
+  #     category_product.category 
+  #   end   
+  # end
   
   # validates :price, numericality: {only_decimal: true}
   # validates :name, length: {minimum: 2}
