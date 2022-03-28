@@ -10,10 +10,18 @@ class CartedProductsController < ApplicationController
     )
 
     if carted_product.save
-      render json: carted_product.as_json
+      render json: carted_product
     else
       render json: {errors: carted_product.errors.full_messages},
       status: 422
     end
   end
+
+  def index
+    carted_products = current_user.carted_products.where(status:"carted")
+    #carted_products = CartedProduct.find_by(current_user)
+    render json: carted_products
+
+  end
+
 end
