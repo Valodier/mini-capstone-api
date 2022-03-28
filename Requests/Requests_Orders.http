@@ -14,7 +14,6 @@ POST http://localhost:3000/orders.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
-{
-  "product_id": 1,
-  "quantity": 2
-}
+###Orders Delete
+DELETE http://localhost:3000/carted_products/6.json
+Authorization: Bearer {{jwt}}

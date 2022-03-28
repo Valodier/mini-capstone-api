@@ -1,12 +1,12 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg1NzIwMzJ9.l5gqF-SFZuQYxmwkg0eTTv22tyMoSULIUAEbHIqKmkA
 
 ###Index Current User Cart
-GET http://localhost:3000/carts.json
+GET http://localhost:3000/carted_products.json
 Authorization: Bearer {{jwt}}
 
 
 ###Create Cart
-POST http://localhost:3000/carts.json
+POST http://localhost:3000/carted_products.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
