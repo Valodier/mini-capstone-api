@@ -1,0 +1,13 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg1NzIwMzJ9.l5gqF-SFZuQYxmwkg0eTTv22tyMoSULIUAEbHIqKmkA
+
+###Create Cart
+POST http://localhost:3000/carts.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 2,
+  "quantity": 2,
+  "status": "carted"
+}

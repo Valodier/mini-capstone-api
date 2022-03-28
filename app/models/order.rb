@@ -2,8 +2,13 @@ class Order < ApplicationRecord
   belongs_to :user
   #belongs_to reflects the foreing key (user_id) column within the schema for this model
   #Order schema has a #user_id# and a #product_id# column, thus they BELONG TO those things
-  has_many :products, through: :carted_products
+
   has_many :carted_products
+  #^^^ Has to come before the next line, tells where to find keys
+  #reflects the belongs_to in carted_products
+  has_many :products, through: :carted_products
+  #^^^ Identifies how the foreign keys are associated, via the join table
+
 end
 
 #Decomposing the orders process
