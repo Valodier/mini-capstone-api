@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg1NzIwMzJ9.l5gqF-SFZuQYxmwkg0eTTv22tyMoSULIUAEbHIqKmkA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg1ODc3Mzh9.WPmt4ryOEYoAV5QHljGst8xVAhuxEaYDpxTBltBmenE
 
 ###Index Current User Cart
 GET http://localhost:3000/carted_products.json
@@ -11,8 +11,10 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "user_id": 1,
   "product_id": 2,
-  "quantity": 2,
-  "status": "carted"
+  "quantity": 2
 }
+
+###Orders Delete
+DELETE http://localhost:3000/carted_products/29.json
+Authorization: Bearer {{jwt}}

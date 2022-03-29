@@ -2,7 +2,6 @@ class Product < ApplicationRecord
   has_many :carted_products
   #reflects belongs_to in carted_products
   has_many :orders, through: :carted_products
-  has_many :users, through: :carted_products
   
   belongs_to :supplier
   #^^^ this is the same as supplier method, belongs_to is singular = find_by

@@ -1,11 +1,11 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg1NzIwMzJ9.l5gqF-SFZuQYxmwkg0eTTv22tyMoSULIUAEbHIqKmkA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg1ODc3Mzh9.WPmt4ryOEYoAV5QHljGst8xVAhuxEaYDpxTBltBmenE
 
 ###Orders Index
 GET http://localhost:3000/orders.json
 Authorization: Bearer {{jwt}}
 
 ###Orders Show
-GET http://localhost:3000/orders/7.json
+GET http://localhost:3000/orders/1.json
 Authorization: Bearer {{jwt}}
 
 
@@ -14,6 +14,6 @@ POST http://localhost:3000/orders.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
-###Orders Delete
-DELETE http://localhost:3000/carted_products/6.json
-Authorization: Bearer {{jwt}}
+
+
+

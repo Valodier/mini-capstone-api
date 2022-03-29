@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
 
 
   def create
-    carted_products = current_user.carted_products.where(status:"carted")
+    carted_products = current_user.carted_products.where(cart_status:"carted")
 
     @order = Order.new(
       user_id: current_user.id,
@@ -22,14 +22,10 @@ class OrdersController < ApplicationController
       # tax: calculated_tax,
       # total: calculated_total
     )
-    if @order.save
-      carted_products.update_all(status: "purchased", order_id: @order.id)
-      @order.update_totals
-      render :show
-    else
-      render json: {errors: @order.errors.full_messages},
-      status: 422
-    end
+    @order.save
+    carted_products.update_all(cart_status: "purchased", order_id: @order.id)
+    @order.update_totals
+    render :show
   end
 
 end
